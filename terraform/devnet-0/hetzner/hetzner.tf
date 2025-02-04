@@ -15,7 +15,7 @@ variable "devnet_hcloud_token" {
 
 variable "hcloud_ssh_key_fingerprint" {
   type    = string
-  default = "d6:76:2d:9c:5b:33:80:ff:0f:09:a2:10:9b:58:7e:dc"
+  default = "19:d6:ff:5b:c2:0c:98:a0:57:34:33:80:ca:29:f5:bc"
 }
 
 variable "hetzner_regions" {
@@ -154,7 +154,7 @@ resource "hcloud_server_network" "main" {
 ////////////////////////////////////////////////////////////////////////////////////////
 
 data "cloudflare_zone" "default" {
-  name = "ethpandaops.io"
+  name = "preconfs.org"
 }
 
 resource "cloudflare_record" "server_record" {
