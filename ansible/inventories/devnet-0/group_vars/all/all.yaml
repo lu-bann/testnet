@@ -37,6 +37,8 @@ checkpoint_sync_url_kube: https://<path:/secrets/services/services.enc.yaml#ethe
 # role: ethpandaops.general.ethereum_genesis
 ethereum_genesis_generator_container_image: "{{ default_tooling_images.ethereum_genesis_generator }}"
 ethereum_genesis_generator_version: "{{ ethereum_genesis_generator_container_image.split(':')[-1] }}"
+debug:
+  msg: "Version being used: {{ ethereum_genesis_generator_version }}"
 ethereum_genesis_network_seed: "{{ ansible_inventory_sources[0] }}"
 ethereum_genesis_chain_id: "70{{ 99999999 | random(start=10000000, seed=ethereum_genesis_network_seed) }}"
 ethereum_genesis_generator_output_dir: "../network-configs/{{ ethereum_network_name | replace('template-', '') }}"
@@ -51,6 +53,8 @@ ethereum_genesis_generator_config_files:
   cl/mnemonics.yaml: "{{ lookup('ansible.builtin.url', 'https://raw.githubusercontent.com/ethpandaops/ethereum-genesis-generator/v{{ethereum_genesis_generator_version}}/config-example/cl/mnemonics.yaml', split_lines=false) }}" # noqa yaml[line-length]
   el/genesis-config.yaml: "{{ lookup('ansible.builtin.url', 'https://raw.githubusercontent.com/ethpandaops/ethereum-genesis-generator/v{{ethereum_genesis_generator_version}}/config-example/el/genesis-config.yaml', split_lines=false) }}" # noqa yaml[line-length]
   values.env: |-
+    export PRESET_BASE="mainnet"
+    export DEPOSIT_CONTRACT_ADDRESS="0x4242424242424242424242424242424242424242"
     export CHAIN_ID="{{ ethereum_genesis_chain_id }}"
     export EL_AND_CL_MNEMONIC="{{ ethereum_genesis_mnemonic }}"
     export NUMBER_OF_VALIDATORS=200
@@ -65,15 +69,12 @@ ethereum_genesis_generator_config_files:
     export EIP7594_FORK_EPOCH="999999"
     export GENESIS_TIMESTAMP={{ ethereum_genesis_timestamp }}
     export GENESIS_DELAY={{ ethereum_genesis_timedelay }}
-    export PRESET_BASE=mainnet
-    export DEPOSIT_CONTRACT_ADDRESS="0x4242424242424242424242424242424242424242"
-    export EL_PREMINE_ADDRS="0x4242424242424242424242424242424242424242"
-    export ADDITIONAL_PRELOADED_CONTRACTS="0x4242424242424242424242424242424242424242"
     export FULU_FORK_VERSION="0x70{{ ethereum_genesis_fork_version_suffix }}"
     export FULU_FORK_EPOCH="999999"
     export SLOT_DURATION_IN_SECONDS=12
     export GENESIS_GASLIMIT=0
-
+    export EL_PREMINE_ADDRS='{"0x1111111111111111111111111111111111111111":"100000000000000000000"}'
+    export ADDITIONAL_PRELOADED_CONTRACTS='{"0x000F3df6D732807Ef1319fB7B8bB8522d0Beac02": {"balance":"0", "nonce":"1", "code":"0x3373fffffffffffffffffffffffffffffffffffffffe14604d57602036146024575f5ffd5b5f35801560495762001fff810690815414603c575f5ffd5b62001fff01545f5260205ff35b5f5ffd5b62001fff42064281555f359062001fff015500"}}'
 ethereum_genesis_validator_keys_output_dir: "{{ ansible_inventory_sources[0] | dirname }}/files/validator_keys"
 ethereum_genesis_validator_bls_change_execution_address: "{{ ethereum_node_cl_validator_fee_recipient }}"
 ethereum_genesis_validator_keyranges: >-
