@@ -1,23 +1,23 @@
-cl_bootnode_privkey: ENC[AES256_GCM,data:BjZ8mBSXLEWv0k4vnLmOO6pOKHmaNKkllf8e4Gaj31HFEbKWZJIrKAVITcvxm0Pqu606riUYyAE8zUrIZfGm6w==,iv:ac19NtQBzMxOu546gUZKbroGlwvQWxmJ5bQQyiHLKjI=,tag:DaqA6zdBfQw1s1Dzj1RxpA==,type:str]
+cl_bootnode_privkey: ENC[AES256_GCM,data:iRpBj+O51zFMhxFPtTty0WXhm5mvjj1gZDQ8QsJNwJShLu+rz32vGnAqUW035P9+IMVChC/Og+/OQKQoXzct5+U=,iv:asEm5fPW+DBHZ1PUxUqWBNvc/95Mw2D4sZPHC57cJdg=,tag:Jm6EdFm+3itcsufkrjoJhA==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2025-02-06T17:22:17Z"
-    mac: ENC[AES256_GCM,data:0qHaLkM+F4F08yC2KyM9HQBK92yU17iRo1RuN1knjEny/5NKovAabUNzJEnVz2n2pz5MQMskcTXjNCgLGK+iYsK3YE8OkOMjneXu2Ke1PfwvaWGZ8hKz6WAsEA3M7Jl3X/AxUDQvqXCO/DjMMUWryXmiNrdEoBbbReprmbYVVh0=,iv:EHA5D/6X/y43LnquzvjLqZ/kbunImrylNgqEKdbV5Ow=,tag:GqmXkY2fqR4z/IfZmgfU/w==,type:str]
+    lastmodified: "2025-02-06T19:34:27Z"
+    mac: ENC[AES256_GCM,data:cZai9x9/jUl5e7P79V7rJSK0y0JMAjhCNzmw3Sl37e7RWjjkDG9f/mgc4dYkTevG226DEncIQX4OaMqqMyzxSDm94/lUQ2mRJ4R1YdWFeFji/bKliUHG2nybhr2x6XQ/cpZ6FGNRN8VQN090cz5ftD+/Gvt6UynEvrtFx2TERfc=,iv:UWHKr/bK7ahqOEPFdc19XMqttxfr7pmZLGDY67B10d0=,tag:vDhX61KMIHG0BmL1L2uRQQ==,type:str]
     pgp:
-        - created_at: "2025-02-06T17:22:17Z"
+        - created_at: "2025-02-06T19:34:27Z"
           enc: |-
             -----BEGIN PGP MESSAGE-----
 
-            hF4D/H5KF81+EG0SAQdAEzO4K0I3ftcYX35rLPhPSirfbZd+n5xC6CiSuI85wHkw
-            p425/GPa8n4IrnuFKxRNh+vYpeSX/8i7IVnyGfEfDXQyJcJRg96YB5QoPAJExjgU
-            1GgBCQIQMSN6f+en9QwgKcyS1JIqun/NtACt9WffnYVIAchJ7QzRP6C4mlipZ7FV
-            OHJ2nj04DO9Nj8PuoVzHBlL4Wj9nsT0SieqLCq6H9iqSQJ81jrZ0upTMo+EiWb/f
-            udBVb7fVpMD/CA==
-            =i3Ze
+            hF4D/H5KF81+EG0SAQdAJDlQw+O59xOu0meGe6/vyL+Ok0seedHDvgUv8jbTdCQw
+            JCnYHZAq+ET+UmcvgOhmOCf6OdaUVpKtWpdWD78r6Z3kZmxI+6yU/6ZYWc+5OrIk
+            1GgBCQIQfxz7VleEAtYFx3uwjdEe96we39DSJ5OTRFhyFV+Xt/ZgmylR6B03VQgI
+            9R+fKdYUpVODIDpNFRTZLPH6jONJ0/WXCl/hL6C+LBlDxL+M1T+STgUsqV8+8qsZ
+            43a0Qt/dCb0Drg==
+            =XPjR
             -----END PGP MESSAGE-----
           fp: F0BC11CFA22CEA71E7D5277AC4B9DEB6C3B3D5CE
     unencrypted_suffix: _unencrypted
