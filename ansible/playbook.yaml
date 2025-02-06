@@ -27,10 +27,6 @@
       tags: [init-server, docker_network]
     - role: ethpandaops.general.node_exporter
       tags: [init-server, node_exporter]
-    - role: ethpandaops.general.prometheus
-      tags: [init-server, prometheus]
-    - role: ethpandaops.general.vector
-      tags: [init-server, vector]
 
 - hosts: hive
   become: true
