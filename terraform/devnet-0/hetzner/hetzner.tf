@@ -15,7 +15,7 @@ variable "devnet_hcloud_token" {
 
 variable "hcloud_ssh_key_fingerprint" {
   type    = string
-  default = "19:d6:ff:5b:c2:0c:98:a0:57:34:33:80:ca:29:f5:bc"
+  default = "00:66:26:3b:34:8b:93:ec:c9:5e:27:3a:82:ab:5c:d4"
 }
 
 variable "hetzner_regions" {
