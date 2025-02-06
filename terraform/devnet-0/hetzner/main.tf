@@ -54,7 +54,7 @@ variable "cloudflare_api_token" {
 
 variable "ethereum_network" {
   type    = string
-  default = "taiyi-devnet"
+  default = "taiyi-devnet-0"
 }
 
 variable "base_cidr_block" {
