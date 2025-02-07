@@ -1,23 +1,23 @@
-cl_bootnode_privkey: ENC[AES256_GCM,data:WGhXb2LW9H8asIEMMHZPX/3ASP0F6TfOcevVJdeb12KMS65tzjVAQewLTCmpWYmeHSX6Oa/sR/8Is6ad75+wD6d8,iv:ONT5D8Y9KEriYGy/a2mvi055WjQ/RVAPgX10oMayod8=,tag:wSHiJiyNNhqHZlqN2DUr+w==,type:str]
+cl_bootnode_privkey: ENC[AES256_GCM,data:L2C0txJSh+hIz9yTWxWA/FCQj+88lpVwRc/TZfHRr3bo3eqkRPFlKy5Pn0+rtbZnIPevrb2VNHU9u7TocXDE+g==,iv:ySAr1Ga5fvp8578rOpix4760UhecRKld8I6QH23zOKw=,tag:Jq+RkBzSnrjvsh3M7ZJZZw==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2025-02-06T23:19:56Z"
-    mac: ENC[AES256_GCM,data:LezxM2wE798P8cOtOHyvq+5rz+/evok9nQkldKLUkoC4FMxcjsheeWhMMBs9Ow2dhf5U9c9IDjZ3Ayo4YxULWpLSlu8j9fc/kmJttNo9p/8ctHNcgyLZ8b2AhMefDrguDlI7g+2a9PcBhADsxt5beNBIMkobgPpwKycZ/5jb+Og=,iv:eyxmWhxkk45EXkk49XPR4cp74Ph97LWg/bZEPYxsCA4=,tag:1/SzzlP5G82/1oW5TfFiNg==,type:str]
+    lastmodified: "2025-02-07T10:51:25Z"
+    mac: ENC[AES256_GCM,data:er1l8rMb0wqjejKnN/VWGLI28xdwPCc+45Wa5pIX63ShdnWSccrr7b+ezHdnYK/W+bVv1AoncVT6TGszgs89BTGaUS1+1r0Hxq4X6LFOZ2qRqiZS8FiCS+ukERGsTjsrhacycfdwVej3OGXaBoW6G11UBPhkzCpH4ZXBMQUxJ/A=,iv:+O96FNuiM09xg33xQ8hE6GDRgISskss8L2rYHGzfjBs=,tag:G2m+bZw/w1h5yVD1GFlmDw==,type:str]
     pgp:
-        - created_at: "2025-02-06T23:19:56Z"
+        - created_at: "2025-02-07T10:51:25Z"
           enc: |-
             -----BEGIN PGP MESSAGE-----
 
-            hF4D/H5KF81+EG0SAQdAuZNE7t/1vfRzsHX45awirSDCcY1yyc8FAomRqg96zwIw
-            HXrUXiYHgXcl7qyRJgTyQN9aU3wMLT3cENlK5QLtyAGxWEVYZzqCByTgSB90uRFb
-            1GgBCQIQekvJm1u7FD+4U3tvjv/04OPWVeqOK9/9o4OQYGbeEO78k9/EwpSp88nR
-            Z20JVLYZDRHQZZoSM8BqURjLK1C2ZE+dGlo04gLN0JVkICLR8ZolhJw+9g87SuvU
-            /pN1wzFrrTNxRA==
-            =fpb6
+            hF4D/H5KF81+EG0SAQdA+DpG+XP5iCtVADPF9sRfymGADtRRn6jEWIgylf/gpQww
+            oCOInSrTEyCDjJrVwhB7LT/W41hdeFaff91uJi12wLdneG+IAbSIoJeyEfVlE+Ws
+            1GgBCQIQfl+Cjh+Kpr3o+LraT4T1JGweIht/lu6Rom1tAxQBkrldwad6ELMpkbcP
+            +1mDHKjek+T1B1asj/r8GJK+FXd/xOwedU0o3SVtwRc4oW0FX/aS+3bvg6EjVQpf
+            77jK14sBX2hy7A==
+            =wKtb
             -----END PGP MESSAGE-----
           fp: F0BC11CFA22CEA71E7D5277AC4B9DEB6C3B3D5CE
     unencrypted_suffix: _unencrypted

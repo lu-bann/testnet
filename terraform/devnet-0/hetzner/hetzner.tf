@@ -50,7 +50,7 @@ locals {
     [
       for i in range(0, vm_group.count) : {
         group_name = "${vm_group.name}"
-        id         = "${vm_group.name}-${i + 1}-arm"
+        id         = "${vm_group.name}-${i + 1}-x86"
         vms = {
           "${i + 1}" = {
             labels = "group_name:${vm_group.name},val_start:${vm_group.validator_start + (i * (vm_group.validator_end -
@@ -71,7 +71,7 @@ locals {
 locals {
   hcloud_default_location    = "nbg1"
   hcloud_default_image       = "debian-12"
-  hcloud_default_server_type = "cax31"
+  hcloud_default_server_type = "cpx41"
   hcloud_global_labels = [
     "Owner:Devops",
     "EthNetwork:${var.ethereum_network}"
