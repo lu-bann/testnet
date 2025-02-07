@@ -48,3 +48,5 @@ default_tooling_images:
   lcli: docker.ethquokkaops.io/dh/sigp/lighthouse:electra-devnet-1
   zcli: electra
   assertoor: docker.ethquokkaops.io/dh/ethpandaops/assertoor:latest
+  cl_bootnode: docker.ethquokkaops.io/dh/protolambda/eth2-bootnode:cleanup
+

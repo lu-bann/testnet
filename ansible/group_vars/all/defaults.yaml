@@ -20,13 +20,6 @@ global_ipv6_subnet_ranges:
 # role: ethpandaops.general.bootstrap
 bootstrap_user: root
 bootstrap_default_user_authorized_keys_github:
-  - barnabasbusa
-  - parithosh
-  - samcm
-  - savid
-  - skylenet
-  - pk910
-  - mattevans
   - chirag-bgh
 
 # role: robertdebock.fail2ban

@@ -1,4 +1,5 @@
 ethereum_cl_bootnode: "{{ hostvars['bootnode-1']['cl_bootnode_fact_enr'] }}"
+cl_bootnode_container_image: "{{ default_tooling_images.cl_bootnode }}"
 
 # role: eth_inventory_web
 eth_inventory_web_container_networks: "{{ docker_networks_shared }}"
@@ -45,11 +46,10 @@ geth_container_env:
 geth_container_command_extra_args:
   - --http.api=eth,net,web3,debug,admin
   - --http.vhosts=*
+  - --gcmode=archive
   - --networkid={{ ethereum_network_id }}
   - --syncmode=full
-  - --gcmode=archive
-  - --state.scheme=hash
-  - --ethstats={{ inventory_hostname }}:{{ ethstats_secret }}@{{ ethstats_url }}
+
 geth_init_custom_network: true
 geth_init_custom_network_genesis_file: "{{ eth_testnet_config_dir }}/genesis.json"
 geth_container_pull: true
@@ -59,5 +59,3 @@ geth_init_custom_network_container_command:
   - init
   - --state.scheme=hash
   - /genesis.json
-
-
