@@ -1,0 +1,154 @@
+# Ansible managed. Don't change this file manually. Template info: /vendor/collections/ansible_collections/ethpandaops/general/roles/generate_kubernetes_config/templates/testnet-homepage.yaml.j2
+
+testnet-homepage:
+  fullnameOverride: homepage
+
+  replicas: 1
+
+  image:
+    repository: docker.ethquokkaops.io/dh/ethpandaops/ethereum-testnet-homepage
+    tag: latest
+    pullPolicy: Always
+  resources:
+    requests:
+      cpu: 33m
+      memory: 64Mi
+  ingress:
+    enabled: true
+
+    className: ingress-nginx-public
+
+    hosts:
+      - host: taiyi-devnet-0.preconfs.org
+        paths:
+          - path: /
+            pathType: Prefix
+
+  customMarkdown: |-
+    ## Network Spec
+    https://notes.ethereum.org/@ethpandaops/taiyi-devnet-0
+
+    ## Ansible setup
+    https://github.com/ethpandaops/taiyi-devnets
+
+    ## Client versions
+    https://github.com/ethpandaops/taiyi-devnets/blob/master/ansible/inventories/devnet-0/group_vars/all/images.yaml
+
+    ## Validator ranges
+    - https://config.taiyi-devnet-0.preconfs.org/api/v1/nodes/validator-ranges
+
+    Some examples:
+    ```sh
+    ## Pretty print in YAML format
+    curl -s https://config.taiyi-devnet-0.preconfs.org/api/v1/nodes/validator-ranges \
+      | yq '.ranges' -P
+    ```
+
+    ## Ethereum node inventory
+    - https://config.taiyi-devnet-0.preconfs.org/api/v1/nodes/inventory
+
+    Some examples on how to filter specific data from the node inventory:
+    ```sh
+    # Getting execution layer client enodes
+    curl -s https://config.taiyi-devnet-0.preconfs.org/api/v1/nodes/inventory \
+      | jq -r '.ethereum_pairs[] | .execution.enode'
+    # Getting conseus layer client ENRs
+    curl -s https://config.taiyi-devnet-0.preconfs.org/api/v1/nodes/inventory \
+      | jq -r '.ethereum_pairs[] | .consensus.enr'
+    ```
+
+    ## Genesis configuration
+    ### Execution layer clients
+    - https://config.taiyi-devnet-0.preconfs.org/el/genesis.json
+    - https://config.taiyi-devnet-0.preconfs.org/el/besu.json
+    - https://config.taiyi-devnet-0.preconfs.org/el/chainspec.json
+
+    ### Consensus layer clients
+    - https://config.taiyi-devnet-0.preconfs.org/cl/config.yaml
+    - https://config.taiyi-devnet-0.preconfs.org/cl/genesis.ssz
+    - https://config.taiyi-devnet-0.preconfs.org/cl/deposit_contract.txt
+    - https://config.taiyi-devnet-0.preconfs.org/cl/deposit_contract_block.txt
+    - https://config.taiyi-devnet-0.preconfs.org/cl/deposit_contract_block_hash.txt
+
+
+  customArgs:
+    - -b
+    - https://taiyi-devnet-0.preconfs.org
+
+  config:
+    baseURL: https://taiyi-devnet-0.preconfs.org
+    languageCode: en-us
+    title: taiyi-devnet-0
+    theme: PaperMod
+    markup:
+      highlight:
+        codeFences: true
+        guessSyntax: true
+        lineNos: false
+        style: monokai
+    params:
+      disableThemeToggle: true
+      defaultTheme: dark
+      ethereum:
+        faucetUrl: https://faucet.taiyi-devnet-0.preconfs.org
+        rpcUrl: https://rpc.taiyi-devnet-0.preconfs.org
+        beaconRpcUrl: https://beacon.taiyi-devnet-0.preconfs.org
+        explorerUrl: https://explorer.taiyi-devnet-0.preconfs.org
+        forkmonUrl: https://forkmon.taiyi-devnet-0.preconfs.org
+        assertoorUrl: https://assertoor.taiyi-devnet-0.preconfs.org
+        beaconexplorerUrl: "https://taiyi-devnet-0.beaconcha.in"
+        doraUrl: https://dora.taiyi-devnet-0.preconfs.org
+        checkpointSyncUrl: "https://checkpoint-sync.taiyi-devnet-0.preconfs.org"
+        blobscanUrl: https://blobscan.com
+        blobscanethpandaUrl: https://blobscan.taiyi-devnet-0.preconfs.org
+        ethstatsUrl: https://ethstats.taiyi-devnet-0.preconfs.org
+        chainName: "taiyi-devnet-0"
+        chainId: "7028081469"
+        github: https://github.com/ethpandaops/taiyi-devnets/tree/master/network-configs/devnet-0/metadata
+      metamask:
+        enabled: true
+      logo:
+        enabled: false
+        url: https://i.imgur.com/M0gEdpw.png
+      assets:
+        favicon: https://i.imgur.com/M0gEdpw.png
+        favicon16x16: https://i.imgur.com/M0gEdpw.png
+        favicon32x32: https://i.imgur.com/M0gEdpw.png
+        apple_touch_icon: https://i.imgur.com/M0gEdpw.png
+        safari_pinned_tab: https://i.imgur.com/M0gEdpw.png
+
+      links:
+      - name: "Devnet Spec"
+        dataLookup: github
+      - name: "JSON RPC"
+        dataLookup: rpcUrl
+      - name: "Beacon RPC"
+        dataLookup: beaconRpcUrl
+      - name: "Explorer"
+        dataLookup: explorerUrl
+      - name: "Dora the Explorer"
+        dataLookup: doraUrl
+      - name: "Assertoor"
+        dataLookup: assertoorUrl
+      - name: "Beaconchain explorer"
+        dataLookup: "beaconexplorerUrl"
+      - name: "Blobscan"
+        dataLookup: blobscanUrl
+      - name: "Blobscan ethpanda edition"
+        dataLookup: blobscanethpandaUrl
+      - name: "Checkpoint Sync"
+        dataLookup: checkpointSyncUrl
+      - name: "Faucet"
+        dataLookup: faucetUrl
+      - name: "Forkmon"
+        dataLookup: forkmonUrl
+      - name: "Ethstats"
+        dataLookup: ethstatsUrl
+    menu:
+      main:
+        - identifier: ethereum-website
+          name: ethereum.org
+          url: https://ethereum.org
+          weight: 30
+    disableKinds: ["taxonomy", "taxonomyTerm"]
+    copyright: "Long live the surge"

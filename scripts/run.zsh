@@ -1,5 +1,5 @@
 #!/bin/zsh
-node="bootnode-1"
+node="bootnode-1-x86"
 network="devnet-0"
 domain="preconfs.org"
 prefix="devnet"
@@ -8,7 +8,7 @@ sops_password=$(sops --decrypt ../ansible/inventories/$network/group_vars/all/al
 sops_mnemonic=$(sops --decrypt ../ansible/inventories/$network/group_vars/all/all.sops.yaml | yq -r '.secret_genesis_mnemonic')
 bn_endpoint="${BEACON_ENDPOINT:-https://$sops_name:$sops_password@bn.$node.$prefix-$network.$domain}"
 rpc_endpoint="${RPC_ENDPOINT:-https://$sops_name:$sops_password@rpc.$node.$prefix-$network.$domain}"
-bootnode_endpoint="${BOOTNODE_ENDPOINT:-https://bootnode-1.$prefix-$network.$domain}"
+bootnode_endpoint="${BOOTNODE_ENDPOINT:-https://bootnode-1-x86.$prefix-$network.$domain}"
 
 # Helper function to display available options
 print_usage() {
