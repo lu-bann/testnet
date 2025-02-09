@@ -49,11 +49,11 @@ dora:
     name: rpc-teku-geth-001
     archive: true
     priority: 1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.bootnode-1-x86.taiyi-devnet-0.preconfs.org
-    name: bootnode-1-x86
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.bootnode-1.taiyi-devnet-0.preconfs.org
+    name: bootnode-1
     priority: -1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.lighthouse-geth-1-x86.taiyi-devnet-0.preconfs.org
-    name: lighthouse-geth-1-x86
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+    name: lighthouse-geth-1
     priority: -1
     archive: true
   executionEndpoints:
@@ -62,11 +62,11 @@ dora:
     name: rpc-teku-geth-001
     archive: true
     priority: 1
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1-x86.taiyi-devnet-0.preconfs.org
-    name: bootnode-1-x86
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1.taiyi-devnet-0.preconfs.org
+    name: bootnode-1
     priority: -1
     archive: false
-  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1-x86.taiyi-devnet-0.preconfs.org
-    name: lighthouse-geth-1-x86
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+    name: lighthouse-geth-1
     priority: -1
     archive: false

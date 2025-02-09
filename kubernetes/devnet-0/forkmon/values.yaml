@@ -19,10 +19,10 @@ forkmon:
   # Rpc
   - addr: http://geth-teku-001:8545
     name: rpc-teku-geth-001
-  - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1-x86.taiyi-devnet-0.preconfs.org
-    name: bootnode-1-x86
-  - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1-x86.taiyi-devnet-0.preconfs.org
-    name: lighthouse-geth-1-x86
+  - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1.taiyi-devnet-0.preconfs.org
+    name: bootnode-1
+  - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+    name: lighthouse-geth-1
 
   config: |
     # How often to reload data from the nodes

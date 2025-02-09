@@ -48,3 +48,9 @@ checkpointz:
         - name: rpc-teku-geth-001
           address: http://teku-geth-001:5052
           dataProvider: true
+        - name: bootnode-1
+          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.bootnode-1.taiyi-devnet-0.preconfs.org
+          dataProvider: true
+        - name: lighthouse-geth-1
+          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+          dataProvider: true

@@ -41,19 +41,19 @@ assertoor:
     enabled: true
 
   endpoints:
-    - name:  bootnode-1-x86
-      executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1-x86.taiyi-devnet-0.preconfs.org
-      consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.bootnode-1-x86.taiyi-devnet-0.preconfs.org
-    - name:  lighthouse-geth-1-x86
-      executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1-x86.taiyi-devnet-0.preconfs.org
-      consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.lighthouse-geth-1-x86.taiyi-devnet-0.preconfs.org
+    - name:  bootnode-1
+      executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1.taiyi-devnet-0.preconfs.org
+      consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.bootnode-1.taiyi-devnet-0.preconfs.org
+    - name:  lighthouse-geth-1
+      executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+      consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
 
   validatorNamesInventory: https://config.taiyi-devnet-0.preconfs.org/api/v1/nodes/validator-ranges
   globalVariables:
     walletPrivkey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.assertoor_private_key}>"
     clientPairNames:
-      - bootnode-1-x86
-      - lighthouse-geth-1-x86
+      - bootnode-1
+      - lighthouse-geth-1
     validatorPairNames:
 
   assertoorTests: []

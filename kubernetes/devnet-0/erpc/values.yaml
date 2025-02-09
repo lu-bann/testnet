@@ -131,5 +131,5 @@ erpc:
             - "trace_transaction"
             - "trace_block"
         upstreams:
-          - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1-x86.taiyi-devnet-0.preconfs.org
-          - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1-x86.taiyi-devnet-0.preconfs.org
+          - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1.taiyi-devnet-0.preconfs.org
+          - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.taiyi-devnet-0.preconfs.org

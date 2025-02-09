@@ -85,3 +85,23 @@ tracoor-single:
             fork: electra
 
     agents:
+      - name: bootnode-1
+        ethereum:
+          overrideNetworkName: taiyi-devnet-0
+          beacon:
+            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.bootnode-1.taiyi-devnet-0.preconfs.org
+          execution:
+            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.bootnode-1.taiyi-devnet-0.preconfs.org
+            traceDisableMemory: true
+            traceDisableStack: true
+            traceDisableStorage: true
+      - name: lighthouse-geth-1
+        ethereum:
+          overrideNetworkName: taiyi-devnet-0
+          beacon:
+            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@bn.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+          execution:
+            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.taiyi-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.taiyi-devnet-0.preconfs.org
+            traceDisableMemory: true
+            traceDisableStack: true
+            traceDisableStorage: true
