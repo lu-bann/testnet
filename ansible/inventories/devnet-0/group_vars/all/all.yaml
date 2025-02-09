@@ -19,11 +19,8 @@ ethereum_network_deposit_contract_block: >-
 ethereum_node_rcp_hostname: "rpc.{{ server_fqdn }}"
 ethereum_node_beacon_hostname: "bn.{{ server_fqdn }}"
 
-ethstats_url: "ethstats.{{ ethereum_network_name }}.{{ domain }}"
-ethstats_secret: "{{ secret_ethstats }}"
-
 ### Checkpoint sync specific for Ansible & Kubernetes
-checkpoint_sync_node: bootnode-1-x86
+checkpoint_sync_node: bootnode-1
 ethereum_node_cl_checkpoint_sync_enabled: false
 checkpoint_sync_url: https://bn.{{ checkpoint_sync_node }}.srv.{{ ethereum_network_name }}.{{ domain }}
 checkpoint_sync_url_kube: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.dencun-devnets.node_ingress.combined}>@bn.{{ checkpoint_sync_node }}.{{ ethereum_network_name }}.{{ domain }}
@@ -52,7 +49,6 @@ ethereum_genesis_generator_config_files:
   el/genesis-config.yaml: "{{ lookup('ansible.builtin.url', 'https://raw.githubusercontent.com/ethpandaops/ethereum-genesis-generator/v{{ethereum_genesis_generator_version}}/config-example/el/genesis-config.yaml', split_lines=false) }}" # noqa yaml[line-length]
   values.env: |-
     export PRESET_BASE="mainnet"
-    export DEPOSIT_CONTRACT_ADDRESS="0x4242424242424242424242424242424242424242"
     export CHAIN_ID="{{ ethereum_genesis_chain_id }}"
     export EL_AND_CL_MNEMONIC="{{ ethereum_genesis_mnemonic }}"
     export NUMBER_OF_VALIDATORS=5
@@ -67,14 +63,6 @@ ethereum_genesis_generator_config_files:
     export EIP7594_FORK_EPOCH="999999"
     export GENESIS_TIMESTAMP={{ ethereum_genesis_timestamp }}
     export GENESIS_DELAY={{ ethereum_genesis_timedelay }}
-    export SLOT_DURATION_IN_SECONDS=12
-    export GENESIS_GASLIMIT=0
-    export EL_PREMINE_ADDRS='{"0x1111111111111111111111111111111111111111":"100000000000000000000"}'
-    export ADDITIONAL_PRELOADED_CONTRACTS='{"0x000F3df6D732807Ef1319fB7B8bB8522d0Beac02": {"balance":"0", "nonce":"1", "code":"0x3373fffffffffffffffffffffffffffffffffffffffe14604d57602036146024575f5ffd5b5f35801560495762001fff810690815414603c575f5ffd5b62001fff01545f5260205ff35b5f5ffd5b62001fff42064281555f359062001fff015500"}}'
-    export MAX_BLOBS_PER_BLOCK=6
-    export BLOB_SIDECAR_SUBNET_COUNT_ELECTRA=9
-    export MAX_REQUEST_BLOB_SIDECARS_ELECTRA=1152
-    export MAX_BLOBS_PER_BLOCK_ELECTRA=9
 ethereum_genesis_validator_keys_output_dir: "{{ ansible_inventory_sources[0] | dirname }}/files/validator_keys"
 ethereum_genesis_validator_bls_change_execution_address: "{{ ethereum_node_cl_validator_fee_recipient }}"
 ethereum_genesis_validator_keyranges: >-
@@ -90,7 +78,6 @@ ethereum_genesis_validator_keyranges: >-
 
 # role: ethpandaops.general.bootstrap
 bootstrap_default_user_authorized_keys_plain:
-  - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDWh9NW66VD4BPKETNyZeZrGN1f7G6dkihW3eAc7cbJPFQGIpnWc2tGq5o13vWW+SoCh16nkYM2oak+PJQxXYTiQnrMJSmSFd7E0DmdcoKadGJEnfosrH++aOZf/eVLe5q3E9NQFVSdOPo1MCRRTuZxPkuMxS6QikW3otWrA3F2vFgmYyki3Cy8huQzHKUZGicividYcUSFTydR2L0oWUNve3FyqMQQQPnfaJ1RvrkeGtdhRSAxa6L0jzgRK7fjpUyhKOofr7kCKARGELRRiB9QikRAoHU2/D/2jtJjKlTCJxArzXyDF2IcQCco+5Oe9x4c7Xch32dbscJSmjaAvsxRnu7GEFCS7b6kKGvwcoq5vJzvp3RBBR7Mosxv6pcM/q7Z4RhXOFVFFiPVl1dqkqSPkUrHwg8LtWOxC+GAl36vxhHLdDEV/RhbSAzO6SfYEWYGH1w7u4oiy2XAT2cNCO0j0tSHS5chX+d7TzwAbBE2HuPL84GVGHZG875hmiE+Dok= # github-actions-ci"
   - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP3RNjdrn3fmF+PZRceWa2uwX7vU1je6VKYCrV3rK9Sy # root@ubuntu-16gb"
 bootstrap_default_user_authorized_keys_github_all:
   - chirag-bgh
