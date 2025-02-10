@@ -21,7 +21,7 @@ dora_executionapi_endpoints:
 dora_chain_name: taiyi-devnet-0
 dora_chain_displayname: "taiyi-devnet-0"
 dora_chain_config: "https://raw.githubusercontent.com/lu-bann/testnet/master/network-configs/devnet-0/metadata/config.yaml"
-dora_chain_genesistime: 1738937351
+dora_chain_genesistime: 1739209900
 dora_frontend_title: "Dora the Explorer"
 dora_frontend_subtitle: "taiyi-devnet-0"
 dora_frontend_ethexplorer: ""
