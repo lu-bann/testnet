@@ -71,7 +71,7 @@ tracoor-single:
             beaconBlocks: 100h
       ethereum:
         config:
-          repository: ethpandaops/taiyi-devnets
+          repository: lu-bann/testnet
           branch: master
           path: network-configs/devnet-0/metadata
         tools:
