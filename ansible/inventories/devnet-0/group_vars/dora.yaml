@@ -6,7 +6,7 @@ dora_beaconapi_endpoints:
     priority: 0
     headers: {}
   - name: bootnode
-    url: "http://bn.bootnode.taiyi-devnet.xyz"
+    url: "http://bn.bootnode-1.taiyi-devnet-0.preconfs.org"
     archive: false
     priority: 0
     headers: {}
@@ -21,7 +21,7 @@ dora_executionapi_endpoints:
 dora_chain_name: taiyi-devnet-0
 dora_chain_displayname: "taiyi-devnet-0"
 dora_chain_config: "https://raw.githubusercontent.com/lu-bann/testnet/master/network-configs/devnet-0/metadata/config.yaml"
-dora_chain_genesistime: 1739209900
+dora_chain_genesistime: 1739214909
 dora_frontend_title: "Dora the Explorer"
 dora_frontend_subtitle: "taiyi-devnet-0"
 dora_frontend_ethexplorer: ""
@@ -33,9 +33,9 @@ dora_enabled: true
 dora_container_name: dora
 dora_container_image: ethpandaops/dora:master
 dora_container_env:
-  VIRTUAL_HOST: "dora.taiyi-devnet.xyz"
+  VIRTUAL_HOST: "dora.preconfs.org"
   VIRTUAL_PORT: "8080"
-  LETSENCRYPT_HOST: "dora.taiyi-devnet.xyz"
+  LETSENCRYPT_HOST: "dora.preconfs.org"
 dora_container_ports:
   - "8080:8080"
 dora_container_volumes:
@@ -134,16 +134,6 @@ dora_config: |
 
     # number of seconds to wait between each epoch (don't overload CL client)
     syncEpochCooldown: 1
-
-  mevIndexer:
-    # list of mev relays to crawl mev blocks from
-    relays: {% if not dora_mev_relays %}[]{% endif %}
-
-    {% for relay in dora_mev_relays %}
-    - {{ relay | to_json }}
-    {% endfor %}
-
-    refreshInterval: 5m
 
   database:
     engine: "pgsql"
