@@ -1,4 +1,4 @@
 blockscout_additional_envs:
-  VIRTUAL_HOST: "blockscout.preconfs.org"
+  VIRTUAL_HOST: "blockscout.taiyi-devnet-0.preconfs.org"
   VIRTUAL_PORT: "4000"
-  LETSENCRYPT_HOST: "blockscout.preconfs.org"
+  LETSENCRYPT_HOST: "blockscout.taiyi-devnet-0.preconfs.org"

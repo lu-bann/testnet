@@ -33,9 +33,9 @@ dora_enabled: true
 dora_container_name: dora
 dora_container_image: ethpandaops/dora:master
 dora_container_env:
-  VIRTUAL_HOST: "dora.preconfs.org"
+  VIRTUAL_HOST: "dora.taiyi-devnet-0.preconfs.org"
   VIRTUAL_PORT: "8080"
-  LETSENCRYPT_HOST: "dora.preconfs.org"
+  LETSENCRYPT_HOST: "dora.taiyi-devnet-0.preconfs.org"
 dora_container_ports:
   - "8080:8080"
 dora_container_volumes:
