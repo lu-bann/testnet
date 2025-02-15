@@ -21,6 +21,7 @@ global_ipv6_subnet_ranges:
 bootstrap_user: root
 bootstrap_default_user_authorized_keys_github:
   - chirag-bgh
+  - zsluedem
 
 # role: robertdebock.fail2ban
 fail2ban_loglevel: INFO

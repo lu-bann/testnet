@@ -81,6 +81,7 @@ bootstrap_default_user_authorized_keys_plain:
   - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP3RNjdrn3fmF+PZRceWa2uwX7vU1je6VKYCrV3rK9Sy # root@ubuntu-16gb"
 bootstrap_default_user_authorized_keys_github_all:
   - chirag-bgh
+  - zsluedem
 bootstrap_default_user_authorized_keys_github: >
   {{
     (bootstrap_default_user_authorized_keys_github_all | default([])) +
