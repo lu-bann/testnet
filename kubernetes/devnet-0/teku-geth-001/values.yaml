@@ -22,7 +22,7 @@ teku-geth-001:
               - --http.vhosts=*
               - --networkid=7028081469
               - --syncmode=full
-              - --bootnodes=enode://a5030adac203a651c789e56960b179e879c35484f4c0a8e27951c23f78fc5456d266faf97a0567961579bb49eadeb3411116183c6e55bc7deea8cf7a35109890@188.245.255.22:30303?discport=30303
+              - --bootnodes=enode://db85ce956b408b2b9286f5612638b635b9ebbce290e1206bd71e78ac9f1cf54fb0f2014ba8375a61831c9fab59811172b7513e3a4bb725463e070f297950a375@188.245.255.22:30303?discport=30303
               - --rpc.allow-unprotected-txs
             erigon:
             ethereumjs:
@@ -31,19 +31,17 @@ teku-geth-001:
             teku:
               - --network=/data/network-config/config.yaml
               - --genesis-state=/data/network-config/genesis.ssz
-              - --p2p-discovery-bootnodes=enr:-Iq4QKvIQyhXDKLtv1u6lBJQOC2JbDoE5QtJiFVu4sFQfLL-ObummnvDVa2Io-onjmUv-9ilDuF2GibKImuMyqEhdU6GAZTxIorIgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QI6Dxq9BB2RJNcDwp-G5E9BoREDWugyhMgVujevj-DmlTtyguV2G4tWspsUqSPYIGLRMP3iDKxckZmxniIUh97QWh2F0dG5ldHOIABgAAAAAAACEZXRoMpCRsvqHYJAwGDZCDwAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMISoJwyxS5D9O90Jsmeao_XfPZiuhbyBYEJx4Crtjs8YN0Y3CCIyiDdWRwgiMo
+              - --p2p-discovery-bootnodes=enr:-Iq4QHgZk6qmKDEKcKjxeuwtJlbjr1VOnYs2BT8uD-9wfA_iPemHQC_eXvPszJ12p6u5EpEiTHdt7KMWv10ftC9l-BaGAZXsf1cdgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QL7Ygp47AVNj8M8KYqVLq3Ra1dj7pCSxRmnQZExutINjVFL8VLDvjjPqyfYPZDIKs2lbAgh4xJgpMUUnUg_e7bcEh2F0dG5ldHOIAAAAAAAADACEZXRoMpCRsvqHYJAwGAoAAAAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMD1ugT9g0SWoIP3ArP3CgnlkAMS24QvsCqy-SWq2CaU4N0Y3CCIyiDdWRwgiMo
               - --p2p-peer-upper-bound=100
               - --data-storage-non-canonical-blocks-enabled=true
-              - --data-storage-mode=PRUNE
               - --logging=info
               - --Xlog-include-p2p-warnings-enabled
               - --metrics-block-timing-tracking-enabled
               - --ignore-weak-subjectivity-period-enabled
-              - --rest-api-docs-enabled
             prysm:
             lighthouse:
               - --testnet-dir=/data/network-config
-              - --boot-nodes=enr:-Iq4QKvIQyhXDKLtv1u6lBJQOC2JbDoE5QtJiFVu4sFQfLL-ObummnvDVa2Io-onjmUv-9ilDuF2GibKImuMyqEhdU6GAZTxIorIgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QI6Dxq9BB2RJNcDwp-G5E9BoREDWugyhMgVujevj-DmlTtyguV2G4tWspsUqSPYIGLRMP3iDKxckZmxniIUh97QWh2F0dG5ldHOIABgAAAAAAACEZXRoMpCRsvqHYJAwGDZCDwAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMISoJwyxS5D9O90Jsmeao_XfPZiuhbyBYEJx4Crtjs8YN0Y3CCIyiDdWRwgiMo
+              - --boot-nodes=enr:-Iq4QHgZk6qmKDEKcKjxeuwtJlbjr1VOnYs2BT8uD-9wfA_iPemHQC_eXvPszJ12p6u5EpEiTHdt7KMWv10ftC9l-BaGAZXsf1cdgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QL7Ygp47AVNj8M8KYqVLq3Ra1dj7pCSxRmnQZExutINjVFL8VLDvjjPqyfYPZDIKs2lbAgh4xJgpMUUnUg_e7bcEh2F0dG5ldHOIAAAAAAAADACEZXRoMpCRsvqHYJAwGAoAAAAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMD1ugT9g0SWoIP3ArP3CgnlkAMS24QvsCqy-SWq2CaU4N0Y3CCIyiDdWRwgiMo
               - --allow-insecure-genesis-sync
             nimbus:
 
@@ -53,7 +51,7 @@ teku-geth-001:
     fullnameOverride: geth-teku-001
     image:
       repository: docker.ethquokkaops.io/dh/ethereum/client-go
-      tag: stable
+      tag: v1.15.2
       pullPolicy: Always
     p2pNodePort:
       enabled: true
@@ -110,7 +108,7 @@ teku-geth-001:
           - name: storage
             mountPath: "/data"
       - name: init-genesis
-        image: docker.ethquokkaops.io/dh/ethereum/client-go:stable
+        image: docker.ethquokkaops.io/dh/ethereum/client-go:v1.15.2
         imagePullPolicy: Always
         securityContext:
           runAsNonRoot: false
@@ -136,7 +134,7 @@ teku-geth-001:
     fullnameOverride: teku-geth-001
     image:
       repository: docker.ethquokkaops.io/dh/consensys/teku
-      tag: latest
+      tag: 25.2.0
       pullPolicy: Always
     mode: "beacon"
     p2pNodePort:

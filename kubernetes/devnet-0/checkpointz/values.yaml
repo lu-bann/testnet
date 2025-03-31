@@ -6,8 +6,8 @@ checkpointz:
 
   image:
     repository: docker.ethquokkaops.io/dh/ethpandaops/checkpointz
-    tag: latest
-    pullPolicy: Always
+    tag: 0.0.12-electra
+    pullPolicy: IfNotPresent
   resources:
     requests:
       cpu: 64m

@@ -4,8 +4,8 @@ dora:
   fullnameOverride: dora
   image:
     repository: docker.ethquokkaops.io/dh/ethpandaops/dora
-    tag: master
-    pullPolicy: IfNotPresent
+    tag: pk910-basic-api-latest
+    pullPolicy: Always
   resources:
     requests:
       cpu: 500m
