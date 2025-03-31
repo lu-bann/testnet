@@ -114,3 +114,9 @@
   roles:
     - role: ethpandaops.general.docker_nginx_proxy
       tags: [docker_nginx_proxy]
+
+- hosts: blockscout
+  become: true
+  roles:
+    - role: blockscout
+      tags: [blockscout]
