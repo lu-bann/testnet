@@ -22,7 +22,7 @@ teku-geth-001:
               - --http.vhosts=*
               - --networkid=7028081469
               - --syncmode=full
-              - --bootnodes=enode://db85ce956b408b2b9286f5612638b635b9ebbce290e1206bd71e78ac9f1cf54fb0f2014ba8375a61831c9fab59811172b7513e3a4bb725463e070f297950a375@188.245.255.22:30303?discport=30303
+              - --bootnodes=enode://40755fed33431a265229aa9e1fd1742e1f53720089941d90887928e597e7badf513c60dcca4912828a5b9f0105842abb9010bf0b2e9a23a534dcac2ae954a63c@188.245.255.22:30303?discport=30303
               - --rpc.allow-unprotected-txs
             erigon:
             ethereumjs:
@@ -31,7 +31,7 @@ teku-geth-001:
             teku:
               - --network=/data/network-config/config.yaml
               - --genesis-state=/data/network-config/genesis.ssz
-              - --p2p-discovery-bootnodes=enr:-Iq4QHgZk6qmKDEKcKjxeuwtJlbjr1VOnYs2BT8uD-9wfA_iPemHQC_eXvPszJ12p6u5EpEiTHdt7KMWv10ftC9l-BaGAZXsf1cdgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QL7Ygp47AVNj8M8KYqVLq3Ra1dj7pCSxRmnQZExutINjVFL8VLDvjjPqyfYPZDIKs2lbAgh4xJgpMUUnUg_e7bcEh2F0dG5ldHOIAAAAAAAADACEZXRoMpCRsvqHYJAwGAoAAAAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMD1ugT9g0SWoIP3ArP3CgnlkAMS24QvsCqy-SWq2CaU4N0Y3CCIyiDdWRwgiMo
+              - --p2p-discovery-bootnodes=enr:-Iq4QLuBR7jFwKecy5_6uEePvXqEXHukjH6vlrXpNZpTQlsxBmEUU1r8mSh2iCYmkL96yIf4dTPkAe8QeokC2g0IcJOGAZXwSneHgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QOgccaMprJpn6Md7Si5KVR8ESz9xRE9MFAoEf8WkERL4Xuy_6rXt4trzByb4_yRP19gGAO168tT_oZ2mHLRq-eYEh2F0dG5ldHOIAMAAAAAAAACEZXRoMpCRsvqHYJAwGAEAAAAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMFZkQqi6GGdUZKohXxpRak4t7E1AWEGhEslVbfShVteYN0Y3CCIyiDdWRwgiMo
               - --p2p-peer-upper-bound=100
               - --data-storage-non-canonical-blocks-enabled=true
               - --logging=info
@@ -41,7 +41,7 @@ teku-geth-001:
             prysm:
             lighthouse:
               - --testnet-dir=/data/network-config
-              - --boot-nodes=enr:-Iq4QHgZk6qmKDEKcKjxeuwtJlbjr1VOnYs2BT8uD-9wfA_iPemHQC_eXvPszJ12p6u5EpEiTHdt7KMWv10ftC9l-BaGAZXsf1cdgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QL7Ygp47AVNj8M8KYqVLq3Ra1dj7pCSxRmnQZExutINjVFL8VLDvjjPqyfYPZDIKs2lbAgh4xJgpMUUnUg_e7bcEh2F0dG5ldHOIAAAAAAAADACEZXRoMpCRsvqHYJAwGAoAAAAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMD1ugT9g0SWoIP3ArP3CgnlkAMS24QvsCqy-SWq2CaU4N0Y3CCIyiDdWRwgiMo
+              - --boot-nodes=enr:-Iq4QLuBR7jFwKecy5_6uEePvXqEXHukjH6vlrXpNZpTQlsxBmEUU1r8mSh2iCYmkL96yIf4dTPkAe8QeokC2g0IcJOGAZXwSneHgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQImWquOUJ26Ql698fQ5KCPN0nSbv9V-nAQ8Wh536_5Te4N1ZHCCIzI,enr:-LK4QOgccaMprJpn6Md7Si5KVR8ESz9xRE9MFAoEf8WkERL4Xuy_6rXt4trzByb4_yRP19gGAO168tT_oZ2mHLRq-eYEh2F0dG5ldHOIAMAAAAAAAACEZXRoMpCRsvqHYJAwGAEAAAAAAAAAgmlkgnY0gmlwhLz1_xaJc2VjcDI1NmsxoQMFZkQqi6GGdUZKohXxpRak4t7E1AWEGhEslVbfShVteYN0Y3CCIyiDdWRwgiMo
               - --allow-insecure-genesis-sync
             nimbus:
 
@@ -51,7 +51,7 @@ teku-geth-001:
     fullnameOverride: geth-teku-001
     image:
       repository: docker.ethquokkaops.io/dh/ethereum/client-go
-      tag: v1.15.2
+      tag: v1.15.7
       pullPolicy: Always
     p2pNodePort:
       enabled: true
@@ -108,7 +108,7 @@ teku-geth-001:
           - name: storage
             mountPath: "/data"
       - name: init-genesis
-        image: docker.ethquokkaops.io/dh/ethereum/client-go:v1.15.2
+        image: docker.ethquokkaops.io/dh/ethereum/client-go:v1.15.7
         imagePullPolicy: Always
         securityContext:
           runAsNonRoot: false
@@ -134,7 +134,7 @@ teku-geth-001:
     fullnameOverride: teku-geth-001
     image:
       repository: docker.ethquokkaops.io/dh/consensys/teku
-      tag: 25.2.0
+      tag: 25.3.0
       pullPolicy: Always
     mode: "beacon"
     p2pNodePort:
